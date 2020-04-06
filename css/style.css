@@ -1,0 +1,563 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*COLORS*/
+/*GRADIENTS*/
+/*FONTS*/
+/*MAPS*/
+@keyframes wiggle {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(-1px, 1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes dots-jump {
+  25% {
+    transform: translateY(-50%);
+  }
+  65% {
+    transform: translateY(-25%);
+  }
+  0%, 10%, 50%, 90%, 100% {
+    transform: translateY(0);
+  }
+}
+body {
+  height: 100vh;
+  position: relative;
+}
+
+/*HEADER*/
+header {
+  width: 100%;
+  height: 245px;
+  background-color: #579c87;
+  border-bottom: 1px solid #a1c181;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+header h1 {
+  font: normal normal 700 7rem/100% "Montserrat", sans-serif;
+  color: #fdcb46;
+  letter-spacing: -5px;
+}
+
+/*MENUS*/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-between;
+  padding: 80px;
+  margin-bottom: 140px;
+}
+
+section {
+  width: 100%;
+}
+
+#prochainement {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.block-prochainement {
+  width: 300px;
+  height: 60px;
+  background-color: #579c87;
+  color: #fdcb46;
+  font: normal normal 600 1.6rem/60px "Montserrat", sans-serif;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.block-menu {
+  width: 460px;
+  height: 700px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  margin-bottom: 40px;
+  background-color: white;
+  overflow: hidden;
+}
+.block-menu--var1 {
+  background-color: #fcdfdb;
+}
+.block-menu--var2 {
+  background-color: #fff5fe;
+}
+.block-menu--var3 {
+  background-color: #f9f9f9;
+}
+.block-menu__heading {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+.block-menu__heading--var1 {
+  font-family: "Zhi Mang Xing", cursive;
+  color: #3c1218;
+}
+.block-menu__heading--var2 {
+  font-family: "Yeseva One", serif;
+  background: linear-gradient(135deg, #d8852e 0%, #905bfd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.2rem;
+}
+.block-menu__heading--var3 {
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(90deg, #2140df 0%, #1b91fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.block-menu__heading--var4 {
+  font-family: "Kaushan Script", cursive;
+  background: linear-gradient(90deg, #3d9339 0%, #bfff7e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.block-menu__headingSec {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+}
+.block-menu__headingSec--var1 {
+  font-family: "Caveat", cursive;
+  color: #3c1218;
+  text-transform: uppercase;
+}
+.block-menu__headingSec--var2 {
+  font-family: "Cantata One", serif;
+  color: #c77412;
+  font-weight: 700;
+}
+.block-menu__headingSec--var3 {
+  font-family: "Caveat", cursive;
+  color: #0887fb;
+}
+.block-menu__headingSec--var4 {
+  font-family: "Caveat", cursive;
+  color: #72bf56;
+}
+
+.block-item {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 460px;
+  height: 700px;
+  transition: all 0.2s ease-in-out;
+}
+.block-item:hover {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.fas.fa-music {
+  background: linear-gradient(135deg, #d8852e 0%, #905bfd 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 4rem;
+  margin: 0 auto;
+  display: block;
+  width: 70px;
+  text-align: center;
+}
+
+/*PAGES MENUS*/
+main h1 {
+  width: 100%;
+  text-align: center;
+  font: normal normal 700 3rem/100% sans-serif;
+  color: #353535;
+  margin: 1rem 0 3rem 0;
+}
+
+.menu {
+  width: 90%;
+  height: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.menu-heading {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.menu-second-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-second-heading h3 {
+  display: block;
+  position: relative;
+  margin: 0 20px;
+}
+.menu-second-heading h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 1px;
+  transform: scaleX(0);
+  transition: transform 0.6s ease-in-out;
+  transform-origin: left;
+}
+.menu-second-heading h3:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.menu-list {
+  width: 100%;
+}
+
+.menu-list-element {
+  width: 100%;
+  font: normal normal 500 1.6rem/100% "Caveat", cursive;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+/*NOTE ENCHANTEE*/
+.menu--note {
+  background-color: #fcdfdb;
+}
+.menu--note .menu-second-heading {
+  font: normal normal 700 2rem/100% "Caveat", cursive;
+  color: #3c1218;
+}
+.menu--note .menu-second-heading::before, .menu--note .menu-second-heading::after {
+  content: "";
+  flex-grow: 1;
+  height: 4px;
+  background-color: #3c1218;
+}
+.menu--note .menu-second-heading h3::after {
+  background-color: #3c1218;
+}
+.menu--note .menu-list-element span:nth-child(2) {
+  font-weight: 800;
+}
+
+/*CHIC A LA FRANCAISE*/
+.menu--chic {
+  background-color: #fff5fe;
+  padding: 50px 20px;
+}
+.menu--chic .menu-second-heading {
+  font: normal normal 500 2rem/100% "Cantata One", serif;
+}
+.menu--chic .menu-second-heading::before, .menu--chic .menu-second-heading::after {
+  content: "";
+  flex-grow: 1;
+  height: 5px;
+}
+.menu--chic .menu-second-heading::after {
+  clip-path: polygon(15% 0, 100% 50%, 15% 100%, 0% 50%);
+}
+.menu--chic .menu-second-heading::before {
+  clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 50%);
+}
+.menu--chic .menu-second-heading.menu-second-heading--var1, .menu--chic .menu-second-heading .menu-second-heading--var1 h3 {
+  color: #c77412;
+}
+.menu--chic .menu-second-heading.menu-second-heading--var1::before, .menu--chic .menu-second-heading.menu-second-heading--var1::after, .menu--chic .menu-second-heading .menu-second-heading--var1 h3::before, .menu--chic .menu-second-heading .menu-second-heading--var1 h3::after {
+  background-color: #c77412;
+}
+.menu--chic .menu-second-heading.menu-second-heading--var1 h3::after, .menu--chic .menu-second-heading .menu-second-heading--var1 h3 h3::after {
+  background-color: #c77412;
+}
+.menu--chic .menu-second-heading.menu-second-heading--var2, .menu--chic .menu-second-heading .menu-second-heading--var2 h3 {
+  color: #a56799;
+}
+.menu--chic .menu-second-heading.menu-second-heading--var2::before, .menu--chic .menu-second-heading.menu-second-heading--var2::after, .menu--chic .menu-second-heading .menu-second-heading--var2 h3::before, .menu--chic .menu-second-heading .menu-second-heading--var2 h3::after {
+  background-color: #a56799;
+}
+.menu--chic .menu-second-heading.menu-second-heading--var2 h3::after, .menu--chic .menu-second-heading .menu-second-heading--var2 h3 h3::after {
+  background-color: #a56799;
+}
+.menu--chic .menu-second-heading.menu-second-heading--var3, .menu--chic .menu-second-heading .menu-second-heading--var3 h3 {
+  color: #6e4ccc;
+}
+.menu--chic .menu-second-heading.menu-second-heading--var3::before, .menu--chic .menu-second-heading.menu-second-heading--var3::after, .menu--chic .menu-second-heading .menu-second-heading--var3 h3::before, .menu--chic .menu-second-heading .menu-second-heading--var3 h3::after {
+  background-color: #6e4ccc;
+}
+.menu--chic .menu-list {
+  margin: 0 80px;
+}
+.menu--chic .menu-list-element {
+  font-family: "Cantata One", serif;
+  font-size: 1.2rem;
+}
+.menu--chic .menu-list--var1 {
+  color: #c77412;
+}
+.menu--chic .menu-list--var2 {
+  color: #a56799;
+}
+.menu--chic .menu-list--var3 {
+  color: #6e4ccc;
+}
+
+/*DELICE DES PAPILLES*/
+.menu--delice {
+  background-color: #f9f9f9;
+}
+.menu--delice .menu-second-heading {
+  font: normal normal 500 2rem/100% "Caveat", cursive;
+  color: black;
+}
+.menu--delice .menu-second-heading::before, .menu--delice .menu-second-heading::after {
+  content: "";
+  flex-grow: 1;
+  height: 4px;
+}
+.menu--delice .menu-second-heading::before {
+  transform: skewX(-30deg);
+}
+.menu--delice .menu-second-heading::after {
+  transform: skewX(30deg);
+}
+.menu--delice .menu-second-heading.menu-second-heading--var1::before, .menu--delice .menu-second-heading.menu-second-heading--var1::after, .menu--delice .menu-second-heading h3::before, .menu--delice .menu-second-heading h3::after {
+  background-color: #0887fb;
+}
+.menu--delice .menu-second-heading.menu-second-heading--var2::before, .menu--delice .menu-second-heading.menu-second-heading--var2::after, .menu--delice .menu-second-heading h3::before, .menu--delice .menu-second-heading h3::after {
+  background-color: #0670f3;
+}
+.menu--delice .menu-second-heading.menu-second-heading--var3::before, .menu--delice .menu-second-heading.menu-second-heading--var3::after, .menu--delice .menu-second-heading h3::before, .menu--delice .menu-second-heading h3::after {
+  background-color: #229df9;
+}
+.menu--delice .menu-list {
+  margin: 0 60px;
+}
+
+/*PALETTE DU GOUT*/
+.menu--palette {
+  background-color: white;
+}
+.menu--palette .menu-heading h2 {
+  font-size: 5rem;
+  height: 120px;
+}
+.menu--palette .menu-second-heading {
+  font: normal normal 500 2rem/100% "Caveat", cursive;
+  color: black;
+}
+.menu--palette .menu-second-heading::before, .menu--palette .menu-second-heading::after {
+  content: "";
+  flex-grow: 1;
+  height: 6px;
+}
+.menu--palette .menu-second-heading::before {
+  background: linear-gradient(90deg, #3d9339 0%, #bfff7e 100%);
+}
+.menu--palette .menu-second-heading::after {
+  background: linear-gradient(275deg, #3d9339 0%, #bfff7e 100%);
+}
+.menu--palette .menu-second-heading h3::after {
+  background: linear-gradient(90deg, #3d9339 0%, #bfff7e 100%);
+}
+.menu--palette .menu-list {
+  margin: 0 60px;
+}
+
+/*PROCHAINEMENT*/
+.prochainement {
+  height: 550px;
+  display: flex;
+  align-content: center;
+}
+
+.dots-anim {
+  display: flex;
+  width: 200px;
+  justify-content: space-evenly;
+}
+
+.dot {
+  font: normal normal 800 6rem/100% sans-serif;
+  color: #579c87;
+  animation: dots-jump 1s ease-in-out infinite both;
+}
+.dot-1 {
+  animation-delay: 100ms;
+}
+.dot-2 {
+  animation-delay: 200ms;
+}
+.dot-3 {
+  animation-delay: 300ms;
+}
+
+/*FOOTER*/
+footer {
+  width: 100%;
+  height: 140px;
+  background-color: #579c87;
+  border-top: 1px solid #a1c181;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 35px;
+  position: fixed;
+  bottom: 0px;
+}
+footer .links-wiggle {
+  color: #fdcb46;
+  font: normal normal 600 2rem/100% "Montserrat", sans-serif;
+  display: block;
+}
+footer .links-wiggle:hover {
+  animation: wiggle 200ms ease-in-out infinite both;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 120px;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  main a {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  main h1 {
+    font-size: 1.8rem;
+    margin: 0 0 2rem 0;
+  }
+
+  .block-menu {
+    width: 100%;
+    height: 460px;
+    margin: 0;
+  }
+
+  .block-item {
+    width: 100%;
+    height: inherit;
+  }
+
+  .block-prochainement {
+    margin: 0 auto;
+  }
+
+  /*PAGES MENUS*/
+  .menu {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu-heading {
+    height: 150px;
+  }
+
+  .menu-list-element {
+    min-height: 50px;
+    height: auto;
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  .menu-list-element span:nth-child(2) {
+    margin-left: 16px;
+  }
+
+  /*CHIC A LA FRANCAISE*/
+  .menu--chic .menu-list {
+    margin: 0 20px;
+  }
+  .menu--chic .menu-second-heading {
+    font-size: 1.1rem;
+  }
+  .menu--chic .menu-second-heading h3 {
+    width: 50%;
+    text-align: center;
+  }
+  .menu--chic .menu-list-element {
+    font-size: 1rem;
+  }
+
+  /*DELICE DES PAPILLES*/
+  .menu--delice .menu-list {
+    margin: 0 20px;
+  }
+  .menu--delice .menu-second-heading {
+    font-size: 1.6rem;
+  }
+  .menu--delice .menu-second-heading h3 {
+    width: 50%;
+    text-align: center;
+  }
+
+  /*LA PALETTE DU GOUT*/
+  .menu--palette .menu-heading h2 {
+    font-size: 3rem;
+  }
+  .menu--palette .menu-list {
+    margin: 0 20px;
+  }
+
+  /*FOOTER*/
+  footer {
+    height: 70px;
+  }
+  footer .links-wiggle {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

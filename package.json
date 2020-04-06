@@ -1,0 +1,17 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "Projet 3 open classroom",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss .css/style.css --use autoprefixer -d.css/prefixed/"
+  },
+  "author": "Marjolaine Robin",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "sass": "^1.26.3"
+  },
+  "devDependencies": {}
+}

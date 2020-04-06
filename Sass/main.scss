@@ -1,0 +1,596 @@
+@import "base/base";
+@import "utils/variables";
+
+@keyframes wiggle {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(1px, 1px);
+    }
+    40% {
+        transform: translate(1px, -1px);
+    }
+    60% {
+        transform: translate(-1px, -1px);
+    }
+    80% {
+        transform: translate(-1px, 1px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes dots-jump {
+
+    25% {
+        transform:translateY(-50%);
+    }
+    65% {
+        transform:translateY(-25%);
+    }
+    0%,
+    10%,
+    50%,
+    90%,
+    100% {
+        transform:translateY(0);
+    }
+}
+
+body {
+    height:100vh;
+    position:relative;
+}
+/*HEADER*/
+header {
+    width:100%;
+    height:245px;
+    background-color:$green-main;
+    border-bottom:1px solid $green-secondary;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    justify-content:center;
+    h1 {
+        font:normal normal 700 7rem/100% $font-maintitle;
+        color:$yellow-main;
+        letter-spacing:-5px;
+    }
+}
+
+/*MENUS*/
+main {
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-evenly;
+    align-items:center;
+    align-content:space-between;
+    padding:80px;
+    margin-bottom:140px;
+}
+
+section {
+    width:100%;
+}
+
+#prochainement {
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.block-prochainement {
+    width:300px;
+    height:60px;
+    background-color:$green-main;
+    color:$yellow-main;
+    font:normal normal 600 1.6rem/60px $font-maintitle;
+    text-align:center;
+    border-radius:10px;
+}
+
+
+.block-menu {
+    width:460px;
+    height:700px;
+    box-shadow:0 0 15px rgba(0,0,0,0.25);
+    margin-bottom:40px;
+    background-color:white;
+    overflow:hidden;
+    &--var1 {
+        background-color:$background-note;
+    }
+    &--var2 {
+        background-color:$background-chic;
+    }
+    &--var3 {
+        background-color:$background-delice;
+    }
+    &__heading{
+        font-size:3rem;
+        width:100%;
+        text-align:center;
+        margin:20px 0;
+        &--var1 {
+            font-family:$font-note;
+            color:map-get($font-colors, menu1-base);
+        }
+        &--var2 {
+            font-family:$font-chic;
+            background:$grad-orange-violet;
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+            font-size:2.2rem;
+        }
+        &--var3 {
+            font-family:$font-delice;
+            background:$grad-blue;
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+        }
+        &--var4 {
+            font-family:$font-palette;
+            background:$grad-green;
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+        }
+    }
+    &__headingSec {
+        width:100%;
+        text-align:center;
+        font-size:3rem;
+        &--var1 {
+            font-family:$font-secondary;
+            color:map-get($font-colors, menu1-base);
+            text-transform:uppercase;
+        }
+        &--var2 {
+            font-family:$font-chic-sec;
+            color:map-get($font-colors, menu2-base);
+            font-weight:700;
+        }
+        &--var3 {
+            font-family:$font-secondary;
+            color:map-get($font-colors, menu3-base);
+        }
+        &--var4 {
+            font-family:$font-secondary;
+            color:map-get($font-colors, menu4-base);
+        }
+    }
+}
+
+.block-item {
+    display:flex;
+    flex-flow:row wrap;
+    align-content:center;
+    align-items:center;
+    justify-content:center;
+    width:460px;
+    height:700px;
+    transition:all 0.2s ease-in-out;
+    &:hover {
+    transform:scale(1.2);
+    opacity:0.5;
+    }
+}
+
+.fas.fa-music {
+    background:$grad-orange-violet;
+    color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+    font-size:4rem;
+    margin: 0 auto;
+    display: block;
+    width: 70px;
+    text-align: center;
+}
+
+/*PAGES MENUS*/
+main h1 {
+    width:100%;
+    text-align:center;
+    font:normal normal 700 3rem/100% sans-serif;
+    color:$neutral-heading;
+    margin:1rem 0 3rem 0;
+}
+
+.menu {
+    width:90%;
+    height:1200px;
+    display:flex;
+    flex-flow:row wrap;
+    padding:50px;
+    box-shadow:0 0 15px rgba(0,0,0,0.25);
+}
+
+.menu-heading {
+    width:100%;
+    margin:20px 0;
+}
+
+.menu-second-heading {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    h3 {
+        display:block;
+        position:relative;
+        margin:0 20px;
+        &::after {
+            content:"";
+            display:block;
+            width:100%;
+            position:absolute;
+            bottom:0px;
+            left:0px;
+            height:1px;
+            transform:scaleX(0);
+            transition:transform 0.6s ease-in-out;
+            transform-origin:left;
+        }
+        &:hover::after {
+            transform:scaleX(1);
+            transform-origin:left;
+        } 
+        
+    }
+    
+}
+
+.menu-list {
+    width:100%;
+}
+
+.menu-list-element {
+    width:100%;
+    font: normal normal 500 1.6rem/100% $font-secondary;
+    display:flex;
+    justify-content:space-between;
+    height:50px;
+    align-items:center;
+}
+
+/*NOTE ENCHANTEE*/
+
+.menu--note {
+    background-color:$background-note;
+    .menu-second-heading {
+        font: normal normal 700 2rem/100% $font-secondary;
+        color:map-get($font-colors, menu1-base);
+        &::before, &::after {
+            content:"";
+            flex-grow:1;
+            height:4px;
+            background-color:map-get($font-colors, menu1-base);
+        }
+        h3 {
+            &::after {
+                background-color:map-get($font-colors, menu1-base);
+            }
+        }   
+    }
+    .menu-list-element {
+        span:nth-child(2) {
+            font-weight:800;
+        }
+    }
+}
+
+/*CHIC A LA FRANCAISE*/
+
+.menu--chic {
+    background-color:$background-chic;
+    padding:50px 20px;
+    .menu-second-heading {
+        font: normal normal 500 2rem/100% $font-chic-sec;
+        &::before, &::after {
+            content:"";
+            flex-grow:1;
+            height:5px;
+        }
+        &::after {
+            clip-path: polygon(15% 0, 100% 50%, 15% 100%, 0% 50%);
+        }
+        &::before {
+            clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 50%);
+        }
+        &.menu-second-heading--var1, .menu-second-heading--var1 h3{
+            color:map-get($font-colors, menu2-base);
+            &::before, &::after {
+                background-color:map-get($font-colors, menu2-base);
+            }
+            h3 {
+                &::after {
+                    background-color:map-get($font-colors, menu2-base);
+                }
+            } 
+        }
+        &.menu-second-heading--var2, .menu-second-heading--var2 h3{
+            color:map-get($font-colors, menu2-var2);
+            &::before, &::after {
+                background-color:map-get($font-colors, menu2-var2);
+            }
+            h3 {
+                &::after {
+                    background-color:map-get($font-colors, menu2-var2);
+                }
+            } 
+        }
+        &.menu-second-heading--var3, .menu-second-heading--var3 h3{
+            color:map-get($font-colors, menu2-var3);
+            &::before, &::after {
+                background-color:map-get($font-colors, menu2-var3);
+            }
+        }
+    }
+    .menu-list {
+        margin:0 80px;
+    }
+    .menu-list-element {
+        font-family:$font-chic-sec;
+        font-size:1.2rem;
+    }
+    .menu-list--var1 {
+        color:map-get($font-colors, menu2-base);
+    }
+    .menu-list--var2 {
+        color:map-get($font-colors, menu2-var2);
+    }
+    .menu-list--var3 {
+        color:map-get($font-colors, menu2-var3);
+    }
+}
+
+/*DELICE DES PAPILLES*/
+
+.menu--delice {
+    background-color:$background-delice;
+    .menu-second-heading {
+        font: normal normal 500 2rem/100% $font-secondary;
+        color:black;
+        &::before, &::after {
+            content:"";
+            flex-grow:1;
+            height:4px;
+        }
+        &::before {
+            transform:skewX(-30deg);
+        }
+        &::after {
+            transform:skewX(30deg);
+        }
+        &.menu-second-heading--var1, h3{
+            &::before, &::after {
+                background-color:map-get($font-colors, menu3-base);
+            }
+            
+        }
+        &.menu-second-heading--var2, h3{
+            &::before, &::after {
+                background-color:map-get($font-colors, menu3-var2);
+            }
+        }
+        &.menu-second-heading--var3, h3{
+            &::before, &::after {
+                background-color:map-get($font-colors, menu3-var3);
+            }
+        }
+    }
+    .menu-list {
+        margin: 0 60px;
+    }
+
+}
+
+/*PALETTE DU GOUT*/
+
+.menu--palette {
+    background-color:white;
+    .menu-heading {
+        h2 {
+            font-size:5rem;
+            height:120px;
+        }
+    }
+    .menu-second-heading {
+        font: normal normal 500 2rem/100% $font-secondary;
+        color:black;
+        &::before, &::after {
+            content:"";
+            flex-grow:1;
+            height:6px;
+        }
+        &::before {
+            background:$grad-green;
+        }
+        &::after {
+            background:$grad-green-rev;
+        }
+        h3 {
+            &::after {
+                background:$grad-green;
+            }
+        } 
+    }
+    .menu-list {
+        margin: 0 60px;
+    }
+}
+
+/*PROCHAINEMENT*/
+
+.prochainement {
+    height:550px;
+    display:flex;
+    align-content:center;
+}
+
+.dots-anim {
+    display:flex;
+    width:200px;
+    justify-content:space-evenly;
+}
+
+.dot {
+    font:normal normal 800 6rem/100% sans-serif;
+    color:$green-main;
+    animation:dots-jump 1s ease-in-out infinite both;
+    @for $i from 1 through 3 {
+        &-#{$i} {
+            animation-delay:100ms * $i;
+        }
+    }
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    width:100%;
+    height:140px;
+    background-color:$green-main;
+    border-top:1px solid $green-secondary;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:center;
+            align-items:center;
+    -webkit-box-pack:justify;
+            justify-content:space-between;
+    padding:35px;
+    position:fixed;
+    bottom:0px;
+    .links-wiggle {
+        color:$yellow-main;
+        font:normal normal 600 2rem/100% $font-maintitle;
+        display:block;
+        &:hover {
+            animation:wiggle 200ms ease-in-out infinite both;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        height:120px;
+        h1 {
+            font-size:3rem;
+        }
+    }
+    main {
+        width:100%;
+        padding:40px;
+        justify-content:center;
+        margin-bottom:50px;
+        a {
+            width:100%;
+            margin-bottom:20px;
+        }
+        h1 {
+            font-size:1.8rem;
+            margin:0 0 2rem 0;
+        }
+    }
+    .block-menu {
+        width:100%;
+        height:460px;
+        margin:0;
+    }
+    .block-item {
+        width:100%;
+        height:inherit;
+    }
+    .block-prochainement {
+        margin:0 auto;
+    }
+
+/*PAGES MENUS*/
+
+.menu {
+    width:100%;
+    padding:20px;
+}
+
+.menu-heading {
+    height:150px;
+}
+
+.menu-list-element {
+    min-height:50px;
+    height:auto;
+    margin:10px 0;
+    font-size:1.2rem;
+    span:nth-child(2){
+        margin-left:16px;
+    }
+}
+
+/*CHIC A LA FRANCAISE*/
+
+.menu--chic  {
+    .menu-list {
+        margin: 0 20px;
+    }
+    .menu-second-heading {
+        font-size:1.1rem;
+        h3 {
+            width:50%;
+            text-align:center;
+        }
+    }
+    .menu-list-element {
+        font-size:1rem;
+    }
+}
+
+
+/*DELICE DES PAPILLES*/
+
+.menu--delice {
+    .menu-list {
+        margin: 0 20px;
+    }
+    .menu-second-heading {
+        font-size:1.6rem;
+        h3 {
+            width:50%;
+            text-align:center;
+        }
+    }
+}
+
+/*LA PALETTE DU GOUT*/
+
+.menu--palette {
+    .menu-heading {
+        h2 {
+        font-size:3rem;
+        }
+    }
+    .menu-list {
+        margin: 0 20px;
+    }
+}
+
+/*FOOTER*/
+
+    footer {
+        height:70px;
+        .links-wiggle {
+            font-size:1rem;
+        }
+    }
+
+}

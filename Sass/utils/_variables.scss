@@ -1,0 +1,41 @@
+/*COLORS*/
+
+$yellow-main: #fdcb46;
+$green-main: #579c87;
+$green-secondary: #a1c181;
+
+$background-note: #fcdfdb;
+$background-chic: #fff5fe;
+$background-delice: #f9f9f9;
+
+$neutral-heading:#353535;
+
+/*GRADIENTS*/
+$grad-coral-orange: linear-gradient(90deg, rgba(240,74,94,1) 0%, rgba(247,143,106,1) 100%);
+$grad-orange-violet: linear-gradient(135deg, rgba(216,133,46,1) 0%, rgba(144,91,253,1) 100%);
+$grad-blue: linear-gradient(90deg, rgba(33,64,223,1) 0%, rgba(27,145,250,1) 100%);
+$grad-green: linear-gradient(90deg, rgba(61,147,57,1) 0%, rgba(191,255,126,1) 100%);
+$grad-green-rev: linear-gradient(275deg, rgba(61,147,57,1) 0%, rgba(191,255,126,1) 100%);
+
+/*FONTS*/
+
+$font-maintitle:'Montserrat', sans-serif;
+$font-note:'Zhi Mang Xing', cursive;
+$font-secondary:'Caveat', cursive;
+$font-chic:'Yeseva One', serif;
+$font-chic-sec:'Cantata One', serif;
+$font-delice:'Dancing Script', cursive;
+$font-palette:'Kaushan Script', cursive;
+
+/*MAPS*/
+
+$font-colors: (
+    menu1-base:#3c1218,
+    menu2-base:#c77412,
+    menu2-var2:#a56799,
+    menu2-var3 :#6e4ccc,
+    menu3-base:#0887fb,
+    menu3-var2:#0670f3,
+    menu3-var3:#229df9,
+    menu4-base:#72bf56
+)
