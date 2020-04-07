@@ -10,35 +10,84 @@ a {
 /*GRADIENTS*/
 /*FONTS*/
 /*MAPS*/
-@keyframes wiggle {
+@-webkit-keyframes wiggle {
   0% {
-    transform: translate(0);
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
   20% {
-    transform: translate(1px, 1px);
+    -webkit-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
   }
   40% {
-    transform: translate(1px, -1px);
+    -webkit-transform: translate(1px, -1px);
+            transform: translate(1px, -1px);
   }
   60% {
-    transform: translate(-1px, -1px);
+    -webkit-transform: translate(-1px, -1px);
+            transform: translate(-1px, -1px);
   }
   80% {
-    transform: translate(-1px, 1px);
+    -webkit-transform: translate(-1px, 1px);
+            transform: translate(-1px, 1px);
   }
   100% {
-    transform: translate(0);
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes wiggle {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px);
+            transform: translate(1px, -1px);
+  }
+  60% {
+    -webkit-transform: translate(-1px, -1px);
+            transform: translate(-1px, -1px);
+  }
+  80% {
+    -webkit-transform: translate(-1px, 1px);
+            transform: translate(-1px, 1px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes dots-jump {
+  25% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  65% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  0%, 10%, 50%, 90%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 @keyframes dots-jump {
   25% {
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   65% {
-    transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
   }
   0%, 10%, 50%, 90%, 100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 body {
@@ -69,10 +118,15 @@ header h1 {
 main {
   max-width: 1200px;
   margin: 0 auto;
+  display: -webkit-box;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+          align-items: center;
   align-content: space-between;
   padding: 80px;
   margin-bottom: 140px;
@@ -84,8 +138,10 @@ section {
 
 #prochainement {
   width: 100%;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .block-prochainement {
@@ -135,6 +191,7 @@ section {
 }
 .block-menu__heading--var3 {
   font-family: "Dancing Script", cursive;
+  background: -webkit-gradient(linear, left top, right top, from(#2140df), to(#1b91fa));
   background: linear-gradient(90deg, #2140df 0%, #1b91fa 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -142,6 +199,7 @@ section {
 }
 .block-menu__heading--var4 {
   font-family: "Kaushan Script", cursive;
+  background: -webkit-gradient(linear, left top, right top, from(#3d9339), to(#bfff7e));
   background: linear-gradient(90deg, #3d9339 0%, #bfff7e 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -172,17 +230,24 @@ section {
 }
 
 .block-item {
+  display: -webkit-box;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
   align-content: center;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   width: 460px;
   height: 700px;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .block-item:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   opacity: 0.5;
 }
 
@@ -210,8 +275,11 @@ main h1 {
 .menu {
   width: 90%;
   height: 1200px;
+  display: -webkit-box;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
   padding: 50px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
@@ -223,9 +291,12 @@ main h1 {
 
 .menu-second-heading {
   width: 100%;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 .menu-second-heading h3 {
   display: block;
@@ -240,13 +311,20 @@ main h1 {
   bottom: 0px;
   left: 0px;
   height: 1px;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
-  transform-origin: left;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 .menu-second-heading h3:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .menu-list {
@@ -256,10 +334,13 @@ main h1 {
 .menu-list-element {
   width: 100%;
   font: normal normal 500 1.6rem/100% "Caveat", cursive;
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   height: 50px;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 /*NOTE ENCHANTEE*/
@@ -272,7 +353,8 @@ main h1 {
 }
 .menu--note .menu-second-heading::before, .menu--note .menu-second-heading::after {
   content: "";
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   height: 4px;
   background-color: #3c1218;
 }
@@ -293,14 +375,17 @@ main h1 {
 }
 .menu--chic .menu-second-heading::before, .menu--chic .menu-second-heading::after {
   content: "";
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   height: 5px;
 }
 .menu--chic .menu-second-heading::after {
-  clip-path: polygon(15% 0, 100% 50%, 15% 100%, 0% 50%);
+  -webkit-clip-path: polygon(15% 0, 100% 50%, 15% 100%, 0% 50%);
+          clip-path: polygon(15% 0, 100% 50%, 15% 100%, 0% 50%);
 }
 .menu--chic .menu-second-heading::before {
-  clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 50%);
+  -webkit-clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 50%);
+          clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 50%);
 }
 .menu--chic .menu-second-heading.menu-second-heading--var1, .menu--chic .menu-second-heading .menu-second-heading--var1 h3 {
   color: #c77412;
@@ -353,14 +438,17 @@ main h1 {
 }
 .menu--delice .menu-second-heading::before, .menu--delice .menu-second-heading::after {
   content: "";
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   height: 4px;
 }
 .menu--delice .menu-second-heading::before {
-  transform: skewX(-30deg);
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
 }
 .menu--delice .menu-second-heading::after {
-  transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
 }
 .menu--delice .menu-second-heading.menu-second-heading--var1::before, .menu--delice .menu-second-heading.menu-second-heading--var1::after, .menu--delice .menu-second-heading h3::before, .menu--delice .menu-second-heading h3::after {
   background-color: #0887fb;
@@ -389,16 +477,19 @@ main h1 {
 }
 .menu--palette .menu-second-heading::before, .menu--palette .menu-second-heading::after {
   content: "";
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   height: 6px;
 }
 .menu--palette .menu-second-heading::before {
+  background: -webkit-gradient(linear, left top, right top, from(#3d9339), to(#bfff7e));
   background: linear-gradient(90deg, #3d9339 0%, #bfff7e 100%);
 }
 .menu--palette .menu-second-heading::after {
   background: linear-gradient(275deg, #3d9339 0%, #bfff7e 100%);
 }
 .menu--palette .menu-second-heading h3::after {
+  background: -webkit-gradient(linear, left top, right top, from(#3d9339), to(#bfff7e));
   background: linear-gradient(90deg, #3d9339 0%, #bfff7e 100%);
 }
 .menu--palette .menu-list {
@@ -408,29 +499,36 @@ main h1 {
 /*PROCHAINEMENT*/
 .prochainement {
   height: 550px;
+  display: -webkit-box;
   display: flex;
   align-content: center;
 }
 
 .dots-anim {
+  display: -webkit-box;
   display: flex;
   width: 200px;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .dot {
   font: normal normal 800 6rem/100% sans-serif;
   color: #579c87;
-  animation: dots-jump 1s ease-in-out infinite both;
+  -webkit-animation: dots-jump 1s ease-in-out infinite both;
+          animation: dots-jump 1s ease-in-out infinite both;
 }
 .dot-1 {
-  animation-delay: 100ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 .dot-2 {
-  animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 .dot-3 {
-  animation-delay: 300ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 /*FOOTER*/
@@ -455,7 +553,8 @@ footer .links-wiggle {
   display: block;
 }
 footer .links-wiggle:hover {
-  animation: wiggle 200ms ease-in-out infinite both;
+  -webkit-animation: wiggle 200ms ease-in-out infinite both;
+          animation: wiggle 200ms ease-in-out infinite both;
 }
 
 @media screen and (max-width: 768px) {
@@ -469,7 +568,8 @@ footer .links-wiggle:hover {
   main {
     width: 100%;
     padding: 40px;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     margin-bottom: 50px;
   }
   main a {
@@ -559,5 +659,3 @@ footer .links-wiggle:hover {
     font-size: 1rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
