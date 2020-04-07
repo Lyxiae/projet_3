@@ -93,6 +93,8 @@ section {
     font:normal normal 600 1.6rem/60px $font-maintitle;
     text-align:center;
     border-radius:10px;
+    display:flex;
+    justify-content: space-evenly;
 }
 
 
@@ -125,7 +127,6 @@ section {
             font-family:$font-chic;
             background:$grad-orange-violet;
             -webkit-background-clip:text;
-            background-clip:text;
             color:transparent;
             font-size:2.2rem;
         }
@@ -133,14 +134,12 @@ section {
             font-family:$font-delice;
             background:$grad-blue;
             -webkit-background-clip:text;
-            background-clip:text;
             color:transparent;
         }
         &--var4 {
             font-family:$font-palette;
             background:$grad-green;
             -webkit-background-clip:text;
-            background-clip:text;
             color:transparent;
         }
     }
@@ -187,7 +186,6 @@ section {
 .fas.fa-music {
     background:$grad-orange-violet;
     color:transparent;
-    background-clip:text;
     -webkit-background-clip:text;
     font-size:4rem;
     margin: 0 auto;
@@ -333,6 +331,11 @@ main h1 {
             &::before, &::after {
                 background-color:map-get($font-colors, menu2-var3);
             }
+            h3 {
+                &::after {
+                    background-color:map-get($font-colors, menu2-var3);
+                }
+            } 
         }
     }
     .menu-list {
@@ -439,13 +442,13 @@ main h1 {
 
 .dots-anim {
     display:flex;
-    width:200px;
     justify-content:space-evenly;
 }
 
 .dot {
-    font:normal normal 800 6rem/100% sans-serif;
-    color:$green-main;
+    font:normal normal 600 2rem/60px sans-serif;
+    color:$yellow-main;
+    margin:0 3px;
     animation:dots-jump 1s ease-in-out infinite both;
     @for $i from 1 through 3 {
         &-#{$i} {
@@ -465,10 +468,11 @@ footer {
     border-top:1px solid $green-secondary;
     display:-webkit-box;
     display:flex;
+    flex-flow:row wrap;
     -webkit-box-align:center;
-            align-items:center;
+    align-items:center;
     -webkit-box-pack:justify;
-            justify-content:space-between;
+    justify-content:space-between;
     padding:35px;
     position:fixed;
     bottom:0px;
@@ -514,6 +518,7 @@ footer {
     }
     .block-prochainement {
         margin:0 auto;
+
     }
 
 /*PAGES MENUS*/
@@ -592,5 +597,4 @@ footer {
             font-size:1rem;
         }
     }
-
 }
