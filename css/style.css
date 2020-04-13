@@ -96,8 +96,6 @@ section {
   font: normal normal 600 1.6rem/60px "Montserrat", sans-serif;
   text-align: center;
   border-radius: 10px;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .block-menu {
@@ -124,13 +122,14 @@ section {
   margin: 20px 0;
 }
 .block-menu__heading--var1 {
-  font-family: "Damion", cursive;
+  font-family: "Zhi Mang Xing", cursive;
   color: #3c1218;
 }
 .block-menu__heading--var2 {
   font-family: "Yeseva One", serif;
   background: linear-gradient(135deg, #d8852e 0%, #905bfd 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   font-size: 2.2rem;
 }
@@ -138,12 +137,14 @@ section {
   font-family: "Dancing Script", cursive;
   background: linear-gradient(90deg, #2140df 0%, #1b91fa 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .block-menu__heading--var4 {
   font-family: "Kaushan Script", cursive;
   background: linear-gradient(90deg, #3d9339 0%, #bfff7e 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .block-menu__headingSec {
@@ -188,6 +189,7 @@ section {
 .fas.fa-music {
   background: linear-gradient(135deg, #d8852e 0%, #905bfd 100%);
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
   font-size: 4rem;
   margin: 0 auto;
@@ -324,9 +326,6 @@ main h1 {
 .menu--chic .menu-second-heading.menu-second-heading--var3::before, .menu--chic .menu-second-heading.menu-second-heading--var3::after, .menu--chic .menu-second-heading .menu-second-heading--var3 h3::before, .menu--chic .menu-second-heading .menu-second-heading--var3 h3::after {
   background-color: #6e4ccc;
 }
-.menu--chic .menu-second-heading.menu-second-heading--var3 h3::after, .menu--chic .menu-second-heading .menu-second-heading--var3 h3 h3::after {
-  background-color: #6e4ccc;
-}
 .menu--chic .menu-list {
   margin: 0 80px;
 }
@@ -415,13 +414,13 @@ main h1 {
 
 .dots-anim {
   display: flex;
+  width: 200px;
   justify-content: space-evenly;
 }
 
 .dot {
-  font: normal normal 600 2rem/60px sans-serif;
-  color: #fdcb46;
-  margin: 0 3px;
+  font: normal normal 800 6rem/100% sans-serif;
+  color: #579c87;
   animation: dots-jump 1s ease-in-out infinite both;
 }
 .dot-1 {
@@ -442,7 +441,6 @@ footer {
   border-top: 1px solid #a1c181;
   display: -webkit-box;
   display: flex;
-  flex-flow: row wrap;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: justify;
