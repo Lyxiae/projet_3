@@ -95,8 +95,28 @@ section {
     border-radius:10px;
     display:flex;
     justify-content: space-evenly;
+    &:hover .dot{
+        animation:dots-jump 1s ease-in-out infinite both;
+        @for $i from 1 through 3 {
+            &-#{$i} {
+                animation-delay:100ms * $i;
+            }
+        }
+    }
+}
+/*PROCHAINEMENT*/
+
+.dots-anim {
+    display:flex;
+    justify-content:space-evenly;
 }
 
+.dot {
+    font:normal normal 600 2rem/60px sans-serif;
+    color:$yellow-main;
+    margin:0 3px;
+    
+}
 
 .block-menu {
     width:460px;
@@ -432,30 +452,7 @@ main h1 {
     }
 }
 
-/*PROCHAINEMENT*/
 
-.prochainement {
-    height:550px;
-    display:flex;
-    align-content:center;
-}
-
-.dots-anim {
-    display:flex;
-    justify-content:space-evenly;
-}
-
-.dot {
-    font:normal normal 600 2rem/60px sans-serif;
-    color:$yellow-main;
-    margin:0 3px;
-    animation:dots-jump 1s ease-in-out infinite both;
-    @for $i from 1 through 3 {
-        &-#{$i} {
-            animation-delay:100ms * $i;
-        }
-    }
-}
 
 
 
@@ -518,8 +515,8 @@ footer {
     }
     .block-prochainement {
         margin:0 auto;
-
     }
+
 
 /*PAGES MENUS*/
 
@@ -561,22 +558,22 @@ footer {
 }
 
 
-/*DELICE DES PAPILLES*/
+    /*DELICE DES PAPILLES*/
 
-.menu--delice {
-    .menu-list {
-        margin: 0 20px;
-    }
-    .menu-second-heading {
-        font-size:1.6rem;
-        h3 {
-            width:50%;
-            text-align:center;
+    .menu--delice {
+        .menu-list {
+            margin: 0 20px;
+        }
+        .menu-second-heading {
+            font-size:1.6rem;
+            h3 {
+                width:50%;
+                text-align:center;
+            }
         }
     }
-}
 
-/*LA PALETTE DU GOUT*/
+    /*LA PALETTE DU GOUT*/
 
 .menu--palette {
     .menu-heading {
@@ -589,7 +586,7 @@ footer {
     }
 }
 
-/*FOOTER*/
+    /*FOOTER*/
 
     footer {
         height:70px;

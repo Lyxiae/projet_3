@@ -99,6 +99,30 @@ section {
   display: flex;
   justify-content: space-evenly;
 }
+.block-prochainement:hover .dot {
+  animation: dots-jump 1s ease-in-out infinite both;
+}
+.block-prochainement:hover .dot-1 {
+  animation-delay: 100ms;
+}
+.block-prochainement:hover .dot-2 {
+  animation-delay: 200ms;
+}
+.block-prochainement:hover .dot-3 {
+  animation-delay: 300ms;
+}
+
+/*PROCHAINEMENT*/
+.dots-anim {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dot {
+  font: normal normal 600 2rem/60px sans-serif;
+  color: #fdcb46;
+  margin: 0 3px;
+}
 
 .block-menu {
   width: 460px;
@@ -404,34 +428,6 @@ main h1 {
 }
 .menu--palette .menu-list {
   margin: 0 60px;
-}
-
-/*PROCHAINEMENT*/
-.prochainement {
-  height: 550px;
-  display: flex;
-  align-content: center;
-}
-
-.dots-anim {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.dot {
-  font: normal normal 600 2rem/60px sans-serif;
-  color: #fdcb46;
-  margin: 0 3px;
-  animation: dots-jump 1s ease-in-out infinite both;
-}
-.dot-1 {
-  animation-delay: 100ms;
-}
-.dot-2 {
-  animation-delay: 200ms;
-}
-.dot-3 {
-  animation-delay: 300ms;
 }
 
 /*FOOTER*/
